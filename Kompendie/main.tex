@@ -1,0 +1,151 @@
+\documentclass[12pt]{report}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{carlito, fancyhdr, comment, etoc, lipsum, enumitem, standalone, subfiles, newclude}
+
+
+\usepackage{exsheets}
+%Vis løsningsforslag på alle oppgaver
+\SetupExSheets{solution/print=false}
+
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[style=ieee, sorting=none]{biblatex}
+
+% Laste inn referanser
+\addbibresource{referanser.bib}
+
+
+
+% Set up the fancyhdr package
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+
+% Define the footer
+\fancyfoot[L]{\vspace{1cm} \makebox[0pt][l]{\hspace{0.5cm} Elektroniske systemer}} % Left-aligned course name, lifted up
+\fancyfoot[R]{%
+ \begin{minipage}{2cm}
+  \centering
+  \includegraphics[height=1cm]{logo/r171JViZ6gmf8WXujFQw.jpg}\\
+  \vspace{-0.5cm} % Adjust vertical space to center page number
+  \thepage
+ \end{minipage}
+}
+
+% ------------------    HER STARTER DOKUMENTET   ------------------
+
+\begin{document}
+%Setter inn tittelsiden som eksternt dokument
+\input{titlepage}
+
+%Innholdsfortegnelse
+\tableofcontents
+\newpage
+
+
+\chapter{Introduksjon}
+Dette dokumentet er et kompendiet som inneholder øvingsoppgaver relevante til første delen av emnet elektroniske systemer. Kompendiet inneholder derfor store deler av hva som er gjennomgått i vårsemestre for førsteklasse deltid, året 2025.
+
+
+\chapter{Oppgaver}
+
+%\localtableofcontents
+
+\section{Dioder}
+
+
+
+En diode er en elektrisk enhet som tillater strøm å bevege seg gjennom den i én retning med langt større letthet enn i den andre. Den vanligste typen diode i moderne kretsdesign er halvlederdiode, selv om andre diodeteknologier eksisterer. Halvlederdioder er symbolisert i skjemaer som Figur 3.1. Begrepet "diode" er vanligvis reservert for små signalenheter, \(I \leq 1 \text{A}\). Begrepet likeretter brukes for kraftenheter, \(I > 1 \text{A}\).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{diode_symbol.png}
+\caption{Halvlederdiode skjema symbol: Piler indikerer retningen av elektronstrømmen.}
+\end{figure}
+
+Når plassert i en enkel batteri-lampe krets, vil dioden enten tillate eller forhindre strøm gjennom lampen, avhengig av polariteten til den påførte spenningen. (Figur 3.2)
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{diode_operation.png}
+\caption{Diode operasjon: (a) Strøm tillates; dioden er foroverpolarisert. (b) Strøm forhindres; dioden er bakoverpolarisert.}
+\end{figure}
+
+Når polariteten til batteriet er slik at elektroner får lov til å strømme gjennom dioden, sies dioden å være foroverpolarisert. Omvendt, når batteriet er "bakover" og dioden blokkerer strøm, sies dioden å være bakoverpolarisert. En diode kan betraktes som en bryter: "lukket" når foroverpolarisert og "åpen" når bakoverpolarisert.
+
+Merkelig nok peker retningen til diodesymbolets "pilhode" mot retningen av elektronstrømmen. Dette er fordi diodesymbolet ble oppfunnet av ingeniører, som hovedsakelig bruker konvensjonell strømnotasjon i sine skjemaer, og viser strøm som en strøm av ladning fra den positive (+) siden av spenningskilden til den negative (-). Denne konvensjonen gjelder for alle halvleder symboler som har "pilhoder": pilen peker i den tillatte retningen av konvensjonell strøm, og mot den tillatte retningen av elektronstrøm.
+
+Diode oppførsel er analog med oppførselen til en hydraulisk enhet kalt en tilbakeslagsventil. En tilbakeslagsventil tillater væskestrøm gjennom den i bare én retning som i Figur 3.3.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{check_valve.png}
+\caption{Hydraulisk tilbakeslagsventil analogi: (a) Elektronstrøm tillates. (b) Strøm forhindres.}
+\end{figure}
+
+Tilbakeslagsventiler er i hovedsak trykkopererte enheter: de åpner og tillater strøm hvis trykket over dem er av riktig "polaritet" for å åpne porten (i analogien vist, større væsketrykk på høyre side enn på venstre). Hvis trykket er av motsatt "polaritet", vil trykkforskjellen over tilbakeslagsventilen lukke og holde porten slik at ingen strøm oppstår. Som tilbakeslagsventiler, er dioder i hovedsak "trykk-" opererte (spenningsopererte) enheter.
+
+Den vesentlige forskjellen mellom foroverpolarisering og bakoverpolarisering er polariteten til spenningen som faller over dioden. La oss ta en nærmere titt på den enkle batteri-diode-lampe kretsen vist tidligere, denne gangen undersøke spenningsfallene over de forskjellige komponentene i Figur 3.4.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{diode_circuit.png}
+\caption{Diode krets spenningsmålinger: (a) Foroverpolarisert. (b) Bakoverpolarisert.}
+\end{figure}
+
+En foroverpolarisert diode leder strøm og faller en liten spenning over den, og lar mesteparten av batterispenningen falle over lampen. Hvis batteriets polaritet er reversert, blir dioden bakoverpolarisert, og faller all batterispenningen og lar ingenting for lampen. Hvis vi betrakter dioden som en selvaktiverende bryter (lukket i foroverpolarisert modus og åpen i bakoverpolarisert modus), gir denne oppførselen mening. Den mest betydelige forskjellen er at dioden faller mye mer spenning når den leder enn den gjennomsnittlige mekaniske bryteren (0,7 volt mot titalls millivolt).
+
+Dette foroverpolarisering spenningsfallet som utvises av dioden skyldes handlingen av utarmingsregionen dannet av P-N-krysset under påvirkning av en påført spenning. Hvis ingen spenning er påført over en halvlederdiode, eksisterer en tynn utarmingsregion rundt området av P-N-krysset, og forhindrer strømflyt. (Figur 3.5 (a)) Utarmingsregionen er nesten blottet for tilgjengelige ladningsbærere, og fungerer som en isolator:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{diode_representation.png}
+\caption{Diode representasjoner: PN-kryss modell, skjema symbol, fysisk del.}
+\end{figure}
+
+Skjema symbolet til dioden er vist i Figur 3.5 (b) slik at anoden (pekende ende) tilsvarer P-type halvleder ved (a). Katode baren, ikke-pekende ende, ved (b) tilsvarer N-type materiale ved (a). Merk også at katodestripen på den fysiske delen (c) tilsvarer katoden på symbolet.
+
+Hvis en bakoverpolarisering spenning påføres over P-N-krysset, utvider denne utarmingsregionen seg, og motstår ytterligere strøm gjennom 
+
+
+
+
+Dette kapittelet inneholder oppgaver relatert til halvleder dioder. Om ingenting annet er gitt i oppgaven så antar vi et ideelt spenningsfall over dioden på $6[V]$.\\
+
+%Setter inn oppgaver fra ekstern ark
+\input{Oppgaver/dioder}
+\printsolutions[section]
+
+
+\SetupExSheets{headings=centered}
+\begin{question}[name=Spørsmål, subtitle=The subtitle of the question]
+testest
+\end{question}
+
+\begin{question}[name=Spørsmål, subtitle=The subtitle of the question]
+testest
+\end{question}
+
+\newpage
+
+\section{Zenerdioder}
+%Setter inn oppgaver fra ekstern ark
+\input{Oppgaver/zenerdioder}
+\printsolutions[section]
+
+
+\section{Tyristor, triac og diac}
+
+\section{BJT transisor}
+
+\section{FET transistor}
+
+\section{Forsterker i praksiss}
+
+\section{Måleteknikk}
+
+\newpage
+
+\printbibliography[heading=bibintoc, title={Referanser}]
+
+
+\end{document}
