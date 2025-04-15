@@ -4,6 +4,15 @@
 *.raw
 *.mat
 
+#latex run files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.xml
+*.gz
+*.toc
+
 *.c
 
 dymosim*
