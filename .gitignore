@@ -1,5 +1,23 @@
-# Object file
-*.o
+*.txt
 
-# Ada Library Information
-*.ali
+*.mat
+
+*.c
+
+dymosim*
+
+#Modelica backup files
+*.bak-mo
+
+# VSCode
+.vscode
+
+# Jupyter notebook temp files
+.ipynb_checkpoints
+
+!/MPC/Resources/Include/**
+!/MPC/Resources/Library/**
+!/MPC/Resources/Source/**
+
+#Microsoft temp files
+~$*
