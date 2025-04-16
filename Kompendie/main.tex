@@ -1,6 +1,8 @@
 \documentclass[12pt]{report}
+
+\usepackage[norsk]{babel}
 \usepackage{graphicx} % Required for inserting images
-\usepackage{carlito, fancyhdr, comment, etoc, lipsum, enumitem, standalone, subfiles, newclude}
+\usepackage{carlito, fancyhdr, comment, etoc, lipsum, enumitem, standalone, subfiles, newclude, float, enumitem}
 
 
 \usepackage{exsheets}
@@ -46,41 +48,26 @@
 Dette dokumentet er et kompendiet som inneholder øvingsoppgaver relevante til første delen av emnet elektroniske systemer. Kompendiet inneholder derfor store deler av hva som er gjennomgått i vårsemestre for førsteklasse deltid, året 2025.
 
 
-\chapter{Oppgaver}
+\chapter{Analoge komponenter}
 
-%\localtableofcontents
+
 
 \section{Dioder}
 
 
-
-
-
-Dette kapittelet inneholder oppgaver relatert til halvleder dioder. Om ingenting annet er gitt i oppgaven så antar vi et ideelt spenningsfall over dioden på $6[V]$.\\
+Dette kapittelet inneholder oppgaver relatert til halvleder dioder. Om ingenting annet er gitt i oppgaven så antar vi et ideelt spenningsfall over dioden på $0,7[V]$.\\
 
 %Setter inn oppgaver fra ekstern ark
 \input{diode/oppgaver_dioder}
 \printsolutions[section]
 
 
-\SetupExSheets{headings=centered}
-\begin{question}[name=Spørsmål, subtitle=The subtitle of the question]
-testest
-\end{question}
-
-\begin{question}[name=Spørsmål, subtitle=The subtitle of the question]
-testest
-\end{question}
 
 \newpage
 
-\section{Zenerdioder}
-%Setter inn oppgaver fra ekstern ark
-%\input{Oppgaver/zenerdioder}
-\printsolutions[section]
-
-
 \section{Tyristor, triac og diac}
+\input{tyristor/oppgaver_tyristor}
+\printsolutions[section]
 
 \section{BJT transisor}
 
