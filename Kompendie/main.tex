@@ -22,16 +22,20 @@
 \pagestyle{fancy}
 \fancyhf{} % Clear all header and footer fields
 
+% Adjust the footer position
+\setlength{\footskip}{3cm} % You can adjust this value as needed
+
 % Define the footer
-\fancyfoot[L]{\vspace{1cm} \makebox[0pt][l]{\hspace{0.5cm} Elektroniske systemer}} % Left-aligned course name, lifted up
+%\fancyfoot[L]{\vspace{1cm} \makebox[0pt][l]{\hspace{0.5cm} Elektroniske systemer}} % Left-aligned course name, lifted up
 \fancyfoot[R]{%
- \begin{minipage}{2cm}
-  \centering
-  \includegraphics[height=1cm]{frontmatter/bilder/r171JViZ6gmf8WXujFQw.jpg}\\
-  \vspace{-0.5cm} % Adjust vertical space to center page number
-  \thepage
- \end{minipage}
+	\begin{minipage}{2cm}
+		\centering
+		\includegraphics[height=1cm]{frontmatter/bilder/r171JViZ6gmf8WXujFQw.jpg}\\
+%		\vspace{-0.5cm} % Adjust vertical space to center page number
+%		\thepage
+	\end{minipage}
 }
+\fancyfoot[C]{\thepage}
 
 % ------------------    HER STARTER DOKUMENTET   ------------------
 
