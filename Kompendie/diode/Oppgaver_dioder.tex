@@ -1,5 +1,5 @@
 
-\begin{question}[name=Spørsmål, topic=dioder]
+\begin{question}[name=Oppgave, topic=dioder]
 	Tegn symbolene for følgende komponenter.
 	\begin{enumerate}[label=\roman*]
 		\item Halvlederdiode
@@ -7,7 +7,8 @@
 		\item Zenerdiode
 	\end{enumerate}
 \end{question}
-	
+
+\vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
 	\begin{figure}[H]
@@ -18,8 +19,9 @@
 	\end{figure}
 \end{solution}
 
+\vspace{0.5cm} % Add space after the solution
 
-\begin{question}[name=Spørsmål, topic=dioder]
+\begin{question}[name=Oppgave, topic=dioder]
 Hva betyr de følgende begrepene i sammenheng med dioder? Svar på spørsmålet og tegn eksempel.
 	\begin{enumerate}[label=\roman*]
 		\item Lederetning
@@ -30,6 +32,7 @@ Hva betyr de følgende begrepene i sammenheng med dioder? Svar på spørsmålet 
 	\end{enumerate}
 \end{question}
 
+\vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
 	\begin{enumerate}[label=\roman*]
@@ -60,11 +63,13 @@ Hva betyr de følgende begrepene i sammenheng med dioder? Svar på spørsmålet 
 	\end{enumerate}
 \end{solution}
 
+\vspace{0.5cm} % Add space after the solution
 
-\begin{question}[name=Spørsmål, topic=dioder]
+\begin{question}[name=Oppgave, topic=dioder]
 	Beskriv tre bruksområder for en halvlederdiode.
 \end{question}
 
+\vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
 	\begin{enumerate}[label=\roman*]
@@ -74,15 +79,15 @@ Hva betyr de følgende begrepene i sammenheng med dioder? Svar på spørsmålet 
 	\end{enumerate}
 \end{solution}
 
-\begin{question}[name=Spørsmål, topic=dioder]
+\vspace{0.5cm} % Add space after the solution
+
+\begin{question}[name=Oppgave, topic=dioder]
 	En LED har et spenningsfall i lederetning på $2,5 [V]$ og det kreves en strøm på $15 [mA]$ for at den skal lyse. Den tilkoblede spenningskilden har en spenning ut på $15 [V]$.
 	
 	Beregn størrelsen på seriemotstanden til dioden.
 \end{question}
 
-
-	
-
+\vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
 Først finner vi spenningsfallet vi må ha over motstanden for at dioden skal ha et spenningsfall på $2,5 [V]$.
@@ -96,10 +101,13 @@ Strømmen resistansen skal sørge for å begrense strømmen i kretsen til $15 [m
 
 \end{solution}
 
+\vspace{0.5cm} % Add space after the solution
 
-\begin{question}[name=Spørsmål, topic=dioder]
+\begin{question}[name=Oppgave, topic=dioder]
 En likeretterdiode har et spenningsfall på $0,7 [V]$ over seg i lederetning. Hvor stor effekt omsettes det i dioden når strømmen er $2 [A]$?
 \end{question}
+
+\vspace{0.5cm} % Add space after the solution
 
 
 \begin{solution}[name=Løsningsforslag oppgave]
@@ -107,7 +115,28 @@ En likeretterdiode har et spenningsfall på $0,7 [V]$ over seg i lederetning. Hv
 	
 \end{solution}
 
-\begin{question}[name=Spørsmål, topic=dioder]
+\vspace{0.5cm} % Add space after the solution
+
+\begin{question}[name=Oppgave, topic=dioder]
+	Hvilken av kretsene vist i \ref{fig:3kretser} er koblet slik at dioden står i lederetning?
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\textwidth]{diode/figurer/3Kretser.png}
+		\caption{Tre forskjellige diodekretser}
+		\label{fig:3kretser}
+	\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+	Krets a) og c)
+\end{solution}
+\vspace{0.5cm} % Add space after the solution
+
+\begin{question}[name=Oppgave, topic=dioder]
 Hvilken spenning vil man måle mellom punkt1 og punkt2 i Figur \ref{fig:10Dserie}.
 
 	\begin{figure}[H]
@@ -119,14 +148,20 @@ Hvilken spenning vil man måle mellom punkt1 og punkt2 i Figur \ref{fig:10Dserie
 
 \end{question}
 
+\vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
-\[U_{D_{tot}}=U_{D1}+U_{D2}+U_{D3}+U_{D4}+U_{D5}+U_{D6}+U_{D7}+U_{D8}+U_{D9}+U_{D10}+\Rightarrow U_{D_{tot}}=10\cdot0,7=7 [V]\] 
-%SPICEmodell - DC-R10D.asc
+	Summerer opp alle spenningsfallene i kretsen.
+	\begin{multline*}
+	U_{D_{tot}}=\sum_{i=1}^{10} U_{D_i}=\sum_{i=1}^{10}\cdot0,7 \Rightarrow \\	U_{D1}+U_{D2}+U_{D3}+U_{D4}+U_{D5}+U_{D6}+U_{D7}+U_{D8}+U_{D9}+U_{D10} \Rightarrow \\ U_{D_{tot}}=10\cdot0,7=7 [V]
+		%SPICEmodell - DC-R10D.asc
+	\end{multline*}
 \end{solution}
 
+\vspace{0.5cm} % Add space after the solution
 
-\begin{question}[name=Spørsmål, topic=dioder]
+
+\begin{question}[name=Oppgave, topic=dioder]
 Hvilken spenning vil man måle mellom punkt1 og punkt2 i Figur \ref{fig:DserieParaMix}
 	
 	\begin{figure}[H]
@@ -139,6 +174,7 @@ Hvilken spenning vil man måle mellom punkt1 og punkt2 i Figur \ref{fig:DseriePa
 	
 \end{question}
 
+\vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
 Siden spenningsfallet over grenenen $D1 \rightarrow D4$ er lik grenen $D5 \rightarrow D8$ kan man summere spenningsfallet over en av de for å finne spenningsfallet frem til anoden av $D9$.
@@ -151,26 +187,118 @@ Benytter det beregnede spenningsfallet og legger til spenningsfallet over $U_{D9
 
 \end{solution}
 
+\vspace{0.5cm} % Add space after the solution
 
 
 
+\begin{question}[name=Oppgave, topic=dioder]
+	Hvilke lamper lyser i Figur \ref{fig:hvilkenLampe}?
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{diode/figurer/hvalyser.png}
+		\caption{Lampekrets}
+		\label{fig:hvilkenLampe}
+	\end{figure}
+	
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+Med utgangspunkt i spenningskildens polariet så vil lampe 1 og lampe 2 lyse.
+	
+\end{solution}
+
+\vspace{0.5cm} % Add space after the solution
 
 
-\begin{question}[name=Spørsmål, topic=dioder]
+\begin{question}[name=Oppgave, topic=dioder]
 Din elektriske sportsbil får tilført en likespenning fra en hurtiglader som vist i \ref{fig:diodeLading}. Hva skjer dersom likespenningen fra spenningskilden blir koblet til med feil polaritet?
 	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\textwidth]{diode/figurer/DiodeLading.png}
-		\caption{Krets med dioder i serie og parallell}
+		\caption{Enkel ladekrets med sikring}
 		\label{fig:diodeLading}
 	\end{figure}
 	
 \end{question}
 
+\vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
-Under vanlige driftsforhold og korrekt polaritet så vil dioden stå i sperreretning og det vil ikke bevege seg strøm gjennom den. Dersom man kobler feil polaritet som beskrevet i oppgaven så vil dioden befinne seg i lederetning. Siden dioden har en relativt lav motstand i lederetning, og strømmen naturlig velger veien tilbake til den negativ polaritet med minst motstand, som vil strømmen bevege seg gjennom dioden. Strømmen vil være opp mot maksimal kortslutningsstrøm for kilden og $>>$\footnote{Tegnet betyr mye større enn. Eksempel: $9\cdot10^{9}>>1\cdot10^{-10}$} enn nominell strøm. Det igjen vil føre til at sikringen løser.
+	
+Under vanlige driftsforhold og korrekt polaritet så vil dioden stå i sperreretning og det vil ikke bevege seg strøm gjennom den. Dersom man kobler feil polaritet som beskrevet i oppgaven så vil dioden befinne seg i lederetning. Siden dioden har en relativt lav motstand i lederetning, og strømmen naturlig velger veien tilbake til den negativ polaritet med minst motstand, som vil strømmen bevege seg gjennom dioden. Strømmen vil være opp mot maksimal kortslutningsstrøm for kilden og $>>$\footnote{Tegnet betyr mye større enn. Eksempel: $9\cdot10^{9}>>1\cdot10^{-10}$} enn nominell strøm. Det igjen vil føre til at sikringen løser. Et eksempel er vist i \ref{fig:diodeLadingSol}.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{diode/figurer/DiodeLading–SOL.png}
+	\caption{Løsning på enkel ladekrets med sikring}
+	\label{fig:diodeLadingSol}
+\end{figure}
+
 	
 \end{solution}
 
+
+
+
+\begin{question}[name=Oppgave, topic=dioder]
+	Din elektriske sportsbil får tilført en likespenning fra en nå oppgradert hurtiglader sammenlignet med løsningen vist i Figur \ref{fig:diodeLading}. Hva skjer nå dersom spenningskilden blir koblet med feil polaritet?
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{diode/figurer/GretzLading.png}
+		\caption{Ladekrets med brolikeretter}
+		\label{fig:diodeLading}
+	\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+Det skjer ingenting siden bro-likeretteren snur polariteten og sørger for riktig polaritet til bilen. I Figur \ref{fig:BroLadingSol} kan man observere retningen på strømmen under nominelle forhold, og i Figur \ref{fig:BroLadingSol2} kan man observere hva som skjer dersom man bytter polaritet.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{diode/figurer/GretzLadingVanlig-SOL.png}
+	\caption{Løsning på ladekrets under nominelle forhold}
+	\label{fig:BroLadingSol}
+\end{figure}
+	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{diode/figurer/GretzLadingFeil-SOL.png}
+	\caption{Løsning på ladekrets med feil polaritet}
+	\label{fig:BroLadingSol2}
+\end{figure}	
+	
+	
+\end{solution}
+
+
+
+
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{question}[name=Oppgave, topic=dioder]
+	Hvilken av kretsene vist i \ref{fig:3kretser} er koblet slik at dioden står i lederetning?
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\textwidth]{diode/figurer/3Kretser.png}
+		\caption{Tre forskjellige diodekretser}
+		\label{fig:3kretser}
+	\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+	Krets a) og c)
+\end{solution}
+\vspace{0.5cm} % Add space after the solution
