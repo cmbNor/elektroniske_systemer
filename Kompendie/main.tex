@@ -2,8 +2,13 @@
 
 \usepackage[norsk]{babel}
 \usepackage{graphicx} % Required for inserting images
-\usepackage{carlito, fancyhdr, comment, etoc, lipsum, enumitem, standalone, subfiles, newclude, float, enumitem, amsmath}
+\usepackage{carlito, fancyhdr, comment, etoc, lipsum, enumitem, standalone, subfiles, newclude, float, enumitem, amsmath, hyperref}
 
+%Gir automatisk nytt avsnitt ved linjeskift
+\usepackage[parfill]{parskip}
+
+%Ikke inrykk ved nytt avsnitt
+\setlength{\parindent}{0pt}
 
 \usepackage{exsheets}
 %Vis løsningsforslag på alle oppgaver
@@ -16,6 +21,15 @@
 % Laste inn referanser
 \addbibresource{referanser.bib}
 
+% Adding abstract funciton
+\newcommand{\chapabstract}[1]{
+	\begin{quote}
+		\singlespacing\small
+		\rule{14cm}{1pt}
+		#1
+		\vskip-4mm
+		\rule{14cm}{1pt}
+\end{quote}}
 
 
 % Set up the fancyhdr package
@@ -35,7 +49,17 @@
 %		\thepage
 	\end{minipage}
 }
-\fancyfoot[C]{\thepage}
+%\fancyfoot[C]{\thepage}
+
+
+
+\fancyhead{}
+\fancyhead[LE,RO]{\nouppercase{\rightmark}}
+\fancyhead[RE,LO]{Side \thepage}
+
+
+
+
 
 % ------------------    HER STARTER DOKUMENTET   ------------------
 
@@ -45,12 +69,8 @@
 
 %Innholdsfortegnelse
 \tableofcontents
-\newpage
-
-
-\chapter{Introduksjon}
-Dette dokumentet er et kompendiet som inneholder øvingsoppgaver relevante til første delen av emnet elektroniske systemer. Kompendiet inneholder derfor store deler av hva som er gjennomgått i vårsemestre for førsteklasse deltid, året 2025.
-
+\input{frontmatter/introduksjon}
+\input{programvare/programvare}
 
 \chapter{Analoge komponenter}
 

@@ -1,7 +1,7 @@
 
 \begin{question}[name=Oppgave, topic=dioder]
 	Tegn symbolene for følgende komponenter.
-	\begin{enumerate}[label=\roman*]
+	\begin{enumerate}[label=\roman*)]
 		\item Halvlederdiode
 		\item LED
 		\item Zenerdiode
@@ -11,10 +11,11 @@
 \vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
+Symboler vist i Figur \ref{fig:diodeSymb}.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\textwidth]{diode/figurer/oppgave1.png}
-		\caption{Eksempel på forskjellige diode symboler.}
+		\caption{Eksempel på forskjellige symboler for dioder.}
 		\label{fig:diodeSymb}
 	\end{figure}
 \end{solution}
@@ -23,7 +24,7 @@
 
 \begin{question}[name=Oppgave, topic=dioder]
 Hva betyr de følgende begrepene i sammenheng med dioder? Svar på spørsmålet og tegn eksempel.
-	\begin{enumerate}[label=\roman*]
+	\begin{enumerate}[label=\roman*)]
 		\item Lederetning
 		\item Sperreretning
 		\item Anode
@@ -35,7 +36,7 @@ Hva betyr de følgende begrepene i sammenheng med dioder? Svar på spørsmålet 
 \vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
-	\begin{enumerate}[label=\roman*]
+	\begin{enumerate}[label=\roman*)]
 		\item Diode koblet slik at den leder strøm
 			\begin{figure}[H]
 			\centering
@@ -72,7 +73,7 @@ Hva betyr de følgende begrepene i sammenheng med dioder? Svar på spørsmålet 
 \vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
-	\begin{enumerate}[label=\roman*]
+	\begin{enumerate}[label=\roman*)]
 		\item Sperre for strøm i én retning
 		\item For å beskytte transistorer og andre følsomme komponenter, kobles dioden som en friløpsdiode når den brukes sammen med en induktiv last.
 		\item Likerette AC til DC
@@ -118,7 +119,7 @@ En likeretterdiode har et spenningsfall på $0,7 [V]$ over seg i lederetning. Hv
 \vspace{0.5cm} % Add space after the solution
 
 \begin{question}[name=Oppgave, topic=dioder]
-	Hvilken av kretsene vist i \ref{fig:3kretser} er koblet slik at dioden står i lederetning?
+	Hvilken av kretsene vist i Figur \ref{fig:3kretser} er koblet slik at dioden står i lederetning?
 	
 	\begin{figure}[H]
 		\centering
@@ -245,13 +246,13 @@ Under vanlige driftsforhold og korrekt polaritet så vil dioden stå i sperreret
 
 
 \begin{question}[name=Oppgave, topic=dioder]
-	Din elektriske sportsbil får tilført en likespenning fra en nå oppgradert hurtiglader sammenlignet med løsningen vist i Figur \ref{fig:diodeLading}. Hva skjer nå dersom spenningskilden blir koblet med feil polaritet?
+	Din elektriske sportsbil får tilført en likespenning fra en nå oppgradert hurtiglader sammenlignet med løsningen vist i Figur \ref{fig:diodeLadingG}. Hva skjer nå dersom spenningskilden blir koblet med feil polaritet?
 	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\textwidth]{diode/figurer/GretzLading.png}
 		\caption{Ladekrets med brolikeretter}
-		\label{fig:diodeLading}
+		\label{fig:diodeLadingG}
 	\end{figure}
 	
 \end{question}
@@ -284,6 +285,10 @@ Det skjer ingenting siden bro-likeretteren snur polariteten og sørger for rikti
 
 \vspace{0.5cm} % Add space after the solution
 
+%DUPLIKAT
+\begin{comment}
+	innhold...
+
 \begin{question}[name=Oppgave, topic=dioder]
 	Hvilken av kretsene vist i \ref{fig:3kretser} er koblet slik at dioden står i lederetning?
 	
@@ -300,5 +305,90 @@ Det skjer ingenting siden bro-likeretteren snur polariteten og sørger for rikti
 
 \begin{solution}[name=Løsningsforslag oppgave]
 	Krets a) og c)
+\end{solution}
+\vspace{0.5cm} % Add space after the solution
+
+\end{comment}
+
+
+\begin{question}[name=Oppgave, topic=dioder]
+Beregn strømmen i kretsen som er vist i Figur \ref{fig:2kilder}.
+	\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{diode/figurer/kretsM2kilder.png}
+			\caption{Diodekrets med to kilder}
+			\label{fig:2kilder}
+		\end{figure}
+
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+Diode $D1$ er koblet i sperreretning og kan betraktes som brudd. Strømmen gjennom $R_1$ beregnes ut fra kretsens spenningsfall.
+
+\[I_{tot}=\frac{U_1-U_2-U_{diode}}{R_1}=\frac{24-4-0,7}{2\cdot10^3}=9,65 [mA]\]
+	
+\end{solution}
+\vspace{0.5cm} % Add space after the solution
+
+
+\begin{question}[name=Oppgave, topic=dioder]
+Gitt det påtrykte signalet vist i Figur \ref{fig:20Sine}, beregn den maksimale strømmen og spenning for kretsen vist i Figur \ref{fig:acKrets}.
+\begin{figure}[H]
+	
+	\begin{minipage}[c]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{diode/plot/20Sinus.png}
+		\caption{Signal på inngangen}
+		\label{fig:20Sine}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{diode/figurer/diodeSinus.png}
+		\caption{Enkel diodekrets}
+		\label{fig:acKrets}
+	\end{minipage}
+\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+Beregner maksimale spenningen $U_{ut_{peak}}$
+\[U_{ut_{peak}}=U_{inn_{peak}}-U_{diode_{peak}}=20-0,7=19,3 [V]\]
+
+Finner så den høyeste strømmen i kretsen  $I_{peak}$
+\[I_{peak}=\frac{U_{ut_{peak}}}{R}=\frac{19,3}{500}=38,6 [mA]\]
+
+\end{solution}
+\vspace{0.5cm} % Add space after the solution
+
+
+
+
+
+
+\begin{question}[name=Oppgave, topic=dioder]
+Tegn hvordan spenningen over dioded i Figur \ref{fig:enklAcDiode} endrer seg med tiden for to hele perioder.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{diode/figurer/ACdiode.png}
+	\caption{Enkel diodekrets}
+	\label{fig:enklAcDiode}
+\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{diode/figurer/ACdiode-LOS.png}
+	\caption{Løsning på enkel diodekrets}
+	\label{fig:enklAcDiodeLOS}
+\end{figure}
+	
 \end{solution}
 \vspace{0.5cm} % Add space after the solution
