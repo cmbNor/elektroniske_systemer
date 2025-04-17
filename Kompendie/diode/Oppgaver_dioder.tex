@@ -82,7 +82,12 @@ Hva betyr de følgende begrepene i sammenheng med dioder? Svar på spørsmålet 
 
 \vspace{0.5cm} % Add space after the solution
 
-\begin{question}[name=Oppgave, topic=dioder]
+
+
+% LED
+
+
+\begin{question}[name=Oppgave, topic=LEDdioder]
 	En LED har et spenningsfall i lederetning på $2,5 [V]$ og det kreves en strøm på $15 [mA]$ for at den skal lyse. Den tilkoblede spenningskilden har en spenning ut på $15 [V]$.
 	
 	Beregn størrelsen på seriemotstanden til dioden.
@@ -101,6 +106,78 @@ Strømmen resistansen skal sørge for å begrense strømmen i kretsen til $15 [m
 \[R_{Serie}=\frac{U_{R-serie}}{I_{LED}}=\frac{12,5}{15\cdot10^{-3}}=830 [\Omega]\]
 
 \end{solution}
+
+
+\begin{question}[name=Oppgave, topic=LEDdioder]
+Diodene $D_1,D_2$ og $D_3$ er helt identiske og koblet i parallell som vist i Figur \ref{fig:LEDpara}. Spenningsfallet over diodene i lederetning skal være $2,5[V]$ og strømmen skal være $14 [mA]$.
+
+
+\begin{enumerate}[label=\roman*)]
+	\item Finn verdien for $R_1, R_2$ og $R_3$.
+	\item Benytt Tabell \ref{tab:LEDspenningsfall} og finn ut hvilken farge diodene mest sannsynlig har.
+\end{enumerate}
+
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{diode/figurer/LEDparallell.png}
+	\caption{LED i parallell}
+	\label{fig:LEDpara}
+\end{figure}
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+	\begin{enumerate}[label=\roman*)]
+		\item Siden alle de tre parallelle grenene er identiske kan vi gjøre beregninger på én av de siden spenningen og den nominelle strømmen er lik for alle grenene.
+		
+		Velger grenen nærmest kilden og finner ønsket spenningsfallet over motstanden.
+		\[U_{R_{1}}=U_1-U_{D_{1}}=10-2,5=7,5 [V]\]
+		
+		Finner motstandsverdien som sørger for at spenningsfallet blir $7,5 [V]$
+		
+		\[R_1=\frac{U_{R_{1}}}{I_{D_{1}}}=\frac{7,5}{14 \cdot 10^{-3}} \approx 536 [\Omega] \]
+		\item Dioden har mest sannsynlig fargen blå.
+	\end{enumerate}
+	
+	
+Siden alle de tre parallelle grenene er identiske kan vi gjøre beregninger på én av de siden spenningen og den nominelle strømmen er lik for alle grenene.
+
+Velger grenen nærmest kilden og finner ønsket spenningsfallet over motstanden.
+\[U_{R_{1}}=U_1-U_{D_{1}}=10-2,5=7,5 [V]\]
+
+Finner motstandsverdien som sørger for at spenningsfallet blir $7,5 [V]$
+
+\[R_1=\frac{U_{R_{1}}}{I_{D_{1}}}=\frac{7,5}{14 \cdot 10^{-3}} \approx 536 [\Omega] \]
+	
+\end{solution}
+\vspace{0.5cm} % Add space after the solution
+
+
+\begin{question}[name=Oppgave, topic=dioder]
+Beregn seriemotstandverdien for en LED basert på databladet presentert i Vedlegg \ref{paper-a}. Dioden skal drives av en kilde som har følgende spenning $U_{kilde}=9 [V]$.
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+Leser av forward voltage $V_f=2 [V]$ @ $I_f=20[mA]$.
+
+Beregner spenningsfall over seriemotsanden.
+\[U_R=U_{kilde}-U_{LED}= 9-2=7[V]\]
+
+Beregner motstandsverdien
+\[R=\frac{U_R}{I_f}=\frac{7}{20 \cdot 10^{-3}}\]
+
+\end{solution}
+
+
+
+
+
+
+
 
 \vspace{0.5cm} % Add space after the solution
 
@@ -154,7 +231,7 @@ Hvilken spenning vil man måle mellom punkt1 og punkt2 i Figur \ref{fig:10Dserie
 \begin{solution}[name=Løsningsforslag oppgave]
 	Summerer opp alle spenningsfallene i kretsen.
 	\begin{multline*}
-	U_{D_{tot}}=\sum_{i=1}^{10} U_{D_i}=\sum_{i=1}^{10}\cdot0,7 \Rightarrow \\	U_{D1}+U_{D2}+U_{D3}+U_{D4}+U_{D5}+U_{D6}+U_{D7}+U_{D8}+U_{D9}+U_{D10} \Rightarrow \\ U_{D_{tot}}=10\cdot0,7=7 [V]
+	U_{D_{tot}}=\sum_{i=1}^{10} U_{D_i}=\sum_{i=1}^{10} 0,7 \Rightarrow \\	U_{D1}+U_{D2}+U_{D3}+U_{D4}+U_{D5}+U_{D6}+U_{D7}+U_{D8}+U_{D9}+U_{D10} \Rightarrow \\ U_{D_{tot}}=10\cdot0,7=7 [V]
 		%SPICEmodell - DC-R10D.asc
 	\end{multline*}
 \end{solution}
@@ -197,7 +274,7 @@ Benytter det beregnede spenningsfallet og legger til spenningsfallet over $U_{D9
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.7\textwidth]{diode/figurer/hvalyser.png}
+		\includegraphics[width=0.5\textwidth]{diode/figurer/hvalyser.png}
 		\caption{Lampekrets}
 		\label{fig:hvilkenLampe}
 	\end{figure}

@@ -2,7 +2,23 @@
 
 \usepackage[norsk]{babel}
 \usepackage{graphicx} % Required for inserting images
-\usepackage{carlito, fancyhdr, comment, etoc, lipsum, enumitem, standalone, subfiles, newclude, float, enumitem, amsmath, hyperref}
+\usepackage{graphicx, array, carlito, fancyhdr, comment, etoc, lipsum, enumitem, standalone, subfiles, newclude, float, enumitem, amsmath, hyperref, adjustbox, titlesec, pdfpages}
+
+\usepackage[style=ieee, sorting=none]{biblatex}
+
+% Fjerne Teksten Kapittel fra overskrift. Justerer plasseringen av chapter navn
+\titleformat{\chapter}[display]
+{\Huge\bfseries}
+{}
+{-120pt}
+{\thechapter.\ }
+\titleformat{name=\chapter,numberless}[display]
+{\Huge\bfseries}
+{}
+{-120pt}
+{}
+\titlespacing*{\chapter}{0pt}{70pt}{10pt} % Juster verdien 40pt for å endre avstanden
+
 
 %Gir automatisk nytt avsnitt ved linjeskift
 \usepackage[parfill]{parskip}
@@ -16,10 +32,11 @@
 
 
 \usepackage[a4paper, total={6in, 8in}]{geometry}
-\usepackage[style=ieee, sorting=none]{biblatex}
+
+
 
 % Laste inn referanser
-\addbibresource{referanser.bib}
+\addbibresource{backmatter/referanser.bib}
 
 % Adding abstract funciton
 \newcommand{\chapabstract}[1]{
@@ -51,8 +68,6 @@
 }
 %\fancyfoot[C]{\thepage}
 
-
-
 \fancyhead{}
 \fancyhead[LE,RO]{\nouppercase{\rightmark}}
 \fancyhead[RE,LO]{Side \thepage}
@@ -74,12 +89,12 @@
 
 \chapter{Analoge komponenter}
 
-
-
 \section{Dioder}
 
 
 Dette kapittelet inneholder oppgaver relatert til halvleder dioder. Om ingenting annet er gitt i oppgaven så antar vi et ideelt spenningsfall over dioden på $0,7[V]$.\\
+\subsection{Lysdioder - LED}
+\input{diode/LED}
 
 %Setter inn oppgaver fra ekstern ark
 \subsection{Oppgaver}
@@ -109,7 +124,9 @@ Dette kapittelet inneholder oppgaver relatert til halvleder dioder. Om ingenting
 
 \newpage
 
-\printbibliography[heading=bibintoc, title={Referanser}]
+\printbibliography%[title={Referanser}]
 
+\appendix
+\input{backmatter/vedlegg}
 
 \end{document}
