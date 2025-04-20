@@ -1,1 +1,296 @@
-\SetupExSheets{headings=block}
+%\SetupExSheets{headings=block}
+
+% ------------------ MALER ------------------
+\begin{comment}
+
+\begin{question}[name=Oppgave, topic=transBJT]
+
+	\begin{enumerate}[label=\roman*)]
+
+	\end{enumerate}
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{}
+		\caption{}
+		\label{fig:}
+	\end{figure}
+\end{solution}
+
+\vspace{0.5cm} % Add space after the solution
+\end{comment}
+
+\begin{question}[name=Oppgave, topic=transBJT]
+	\begin{enumerate}[label=\roman*)]
+		\item Hva heter de tre tre forskjellig strømmene i en BJT-transistor?
+		\item Hvilken av strømmene i en BJT-transistor er vanligvis den største?
+		\item Hva er forskjellen mellom saturation og cut-off for en transistor?
+		\item Hva beskriver strømforsterkningen $B$?
+	\end{enumerate}
+
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+		\begin{enumerate}[label=\roman*)]
+		\item Kollektor-strøm, emitter-strøm og basis-strøm
+		\item Emitter er vanligvis den største siden den er summen av kollektor og basestrømmen
+		\item Saturation oppstår når transistoren leder maksimalt og spenningsfallet mellom kollektor og emitter er $\approx 0 [V]$.
+		
+		Cut-off oppstår når det ikke går noen kollektor-strøm og nesten hele det maksimale spenningsfallet ligger over transistorens kollektor og emitter pinner.
+		\item Forholdet mellom kollektor-strømmen og base-strømmen.
+	\end{enumerate}
+
+\end{solution}
+
+\vspace{0.5cm} % Add space after the solution
+
+
+\begin{question}[name=Oppgave, topic=transBJT]
+Basert på kretsen presentert i Figur \ref{fig:tranBJT1} Beregn verdiene for $I_B$, $I_C$, $I_E$ og $U_{CE}$. Anta en strømforsterkning $\beta =75$ og spenningsfall $U_{BE}=0,7[V]$.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{transistor-BJT/figurer/krets1.png}
+		\caption{Krets med BJT-transistor}
+		\label{fig:tranBJT1}
+	\end{figure}
+
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+Finner først basis-strømmen.
+\[I_B=\frac{U_1-U_{BE}}{R_1}=\frac{2-0,7}{4,7\cdot 10^3}\approx 0,277 [mA]\]
+
+Bruker strømforsterkningen $ \beta $ for å finne strømmen $I_K$.
+\[\beta=\frac{I_C}{I_B} \rightarrow I_C= \beta \cdot I_B=75\cdot0,277 \cdot10^{-3} \approx 20,7[mA]\]
+
+
+Finner så strømmen  $I_C$.
+\[I_B+I_C+I_E=0 \rightarrow I_C=I_E-I_B=20,7\cdot 10^{-3} - 0,277 \cdot 10^{-3} \approx 20,42 [mA]\]
+
+Beregner spenningsfallet $U_{BE}$.
+\[U_{CE}=U_2-U_{R2}=U_2-(R_2 \cdot I_C) =24-(430 \cdot 20,42 \cdot 10^{-3}) \approx 15,2[V]\]
+	
+\end{solution}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{question}[name=Oppgave, topic=transBJT]
+	Basert på kretsen presentert i Figur \ref{fig:tranBJT2} Beregn verdiene for $I_B$, $I_C$, $I_E$ og $U_{CE}$. Anta en strømforsterkning $\beta=250$ og spenningsfall $U_{BE}=0,7[V]$.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.25\textwidth]{transistor-BJT/figurer/krets2.png}
+		\caption{Krets med BJT-transistor}
+		\label{fig:tranBJT2}
+	\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+Finner basis-strømmen.
+\[I_B=\frac{U_{R1}}{R_1}= \frac{1-0,7}{22 \cdot 10^3} \approx 13,64 [\mu A]\]
+Bruker transistorens formel for strømforsterkning til å finne emitter-strømmen.
+\[I_E=\beta \cdot I_B =250 \cdot 13,64 \cdot 10^{-6} \approx 3,41 [mA]\]
+
+Den relativt store forsterkningen gjør at antall desimaler brukt i $I_B$ vil påvirke nøyaktigheten på $I_E$ i stor grad.
+
+I dette tilfellet er $I_K >>\footnote{Tegnet betyr mye større enn. Eksempel: $9\cdot10^{9}>>1\cdot10^{-10}$} I_B$ og vi kan derfor forenkle beregningen ved å anta $I_E = I_K$
+
+\[U_{CE} = U_2-U_{R_{2}}=10-(1\cdot 10^3 \cdot 3,41 \cdot 10^{-3}) = 6,59 [V] \]
+
+
+\end{solution}
+\vspace{0.5cm} % Add space after the solution
+\begin{question}[name=Oppgave, topic=transBJT]
+	Basert på kretsen presentert i Figur \ref{fig:tranBJT3} Beregn verdiene for $I_C$, $I_E$, $U_B$ og $U_{BE}$. Anta spenningsfall $U_{BE}=0,7[V]$.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\textwidth]{transistor-BJT/figurer/krets3.png}
+		\caption{Krets med BJT-transistor}
+		\label{fig:tranBJT3}
+	\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+Finner spenninging $U_B$
+
+\[U_B= \left(\frac{R_2}{R_1+R_2} \right) \cdot U_1 = \left(\frac{15 \cdot 10^3}{47 \cdot 10^3 + 15 \cdot 10^3} \right) \cdot 12 = 2,9 [V]\]
+
+Beregner emitterspenningen basert på spenningsfallene  $U_B$ og $U_{BE}$.
+\[U_E = U_B - U_{BE}=2,90-0,7=2,2 [V]\]
+
+\[I_E = \frac{U_4}{R_4}=\frac{2,2}{1,2 \cdot 10^3} \approx 1,833 [mA]\]
+
+Antar $I_C = I_E$.
+
+Finner totale spenningsfallet fra kollektor-pinnen til jord. Dette er summen av to spenningsfall $U_{CE}$ og $U_{R_{4}}$.
+\[U_C = U_1-U_{R_{3}}=U_1-(I_C \cdot R_3)=12-(1,833 \cdot 10^{-3} \cdot 2,7 \cdot 10^{3})=7,1 [V]\]
+
+Trekker fra spenningsfallet over $U_{R_{4}}$ fra $U_C$ for å finne spenningsfallet over transistoren $U_{CE}$.
+
+\[U_{KE} = U_K-U_E=7,1-2,2=4,9 [V]\]
+
+\end{solution}
+
+\vspace{0.5cm} % Add space after the solution
+
+
+\begin{question}[name=Oppgave, topic=transBJT]
+	Basert på kretsen presentert i Figur \ref{fig:tranBJT4} Beregn verdiene for $I_B$, $I_C$, $I_E$ og $U_C$. Anta spenningsfall $U_{BE}=0,7[V]$ og $\beta=90$.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{transistor-BJT/figurer/krets4.png}
+		\caption{Krets med BJT-transistor}
+		\label{fig:tranBJT4}
+	\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+Beregner resistansen for basis-strømmen.
+
+\[R_B= \left(\frac{1}{R_1} + \frac{1}{R_2} \right)^{-1} = \left( \frac{1}{44\cdot 10^3} + \frac{1}{44 \cdot 10^3}\right)^{-1}= 22 [k\Omega]\]
+
+Finner $I_B$.
+
+\[I_B = \frac{U_1-U_{BE}}{R_B} = \frac{9-0,7}{22 \cdot 10^3} \approx 0,377 [mA]\]
+
+Bruker forsterkningen $\beta$ til å finne $I_E$.
+
+\[I_E = \beta \cdot I_B = 90 \cdot 0,377 \cdot 10^{-3} \approx 34 [mA] \]
+
+\[I_C = I_C - I_B = 34 \cdot 10^{-3} - 0,377 \cdot 10^{-3} = 33,623 [mA]\]
+
+Finner spenningen $U_C$ som er spenningsfallet mellom kollektor-pinnen og jord.
+
+Summerer kollektor-motstandene
+\[R_K = R_3+R_4=110+110=220 [\Omega]\]
+
+\[U_C=U_2-U_{R_{K}} = U_2 - \left( R_K \cdot I_K \right)=9- \left( 220 \cdot 33,623 \cdot 10^{-3} \right) \approx 7,4 [V]\]
+
+\end{solution}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{question}[name=Oppgave, topic=transBJT]
+	Basert på kretsen presentert i Figur \ref{fig:tranBJT5} Finn motstandsverdien for $R_1$ slik at strømmen i $I_C=120 [mA]$. Anta spenningsfall $U_{BE}=0,7[V]$ og $\beta=96$.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{transistor-BJT/figurer/krets5.png}
+		\caption{Krets med BJT-transistor}
+		\label{fig:tranBJT5}
+	\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+\[\beta = \frac{I_C}{I_B} \rightarrow I_B = \frac{I_C}{\beta} \rightarrow I_B= \frac{120 \cdot 10^{-3}}{96} = 1,25[mA]\]
+
+\[R_1= \frac{U_{R_{1}}}{I_B} = \frac{6-0,7}{1,25 \cdot 10^{-3}}=4,24[k\Omega] \]
+
+\end{solution}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{question}[name=Oppgave, topic=transBJT]
+	
+Finn motstandsverdiet for $R_B$ og $R_K$ for kretsen presentert i Figur \ref{fig:tranBJT6}.
+	
+Kretsen skal dimensjoneres til å ha følgende verdier:
+\[U_{KE}=6[V]\]
+\[U_{BE}=0,7[V]\]
+\[I_K=6[mA]\]
+
+Transistoren $Q_1$ har oppgitt $ \beta= 150$ og spenningen for kilden $ U_b=12[V]$
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{transistor-BJT/figurer/krets6.png}
+		\caption{Krets med BJT-transistor}
+		\label{fig:tranBJT6}
+	\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+\[\beta = \frac{I_C}{I_B} \rightarrow I_B=\frac{I_K}{\beta}=\frac{6 \cdot 10^{-3}}{150} = 40[\mu A]\]
+
+\[R_B=\frac{U_B-U_{BE}}{I_B}= \frac{12-0,7}{40 \cdot 10^{-6}}=282,5[k\Omega] \]
+
+\[R_K=\frac{U_B-U_{KE}}{I_K}= \frac{12-6}{6 \cdot 10^{-3}}=1[k\Omega]\]
+
+\end{solution}
+
+
+\begin{question}[name=Oppgave, topic=transBJT]
+Ta utgangspunkt å Figur \ref{fig:tranBJT7}. Det er brudd i $R_1$. Hva blir verdien for $U_B$, $U_E$ og $U_C$?
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{transistor-BJT/figurer/krets7.png}
+		\caption{Krets med BJT-transistor}
+		\label{fig:tranBJT7}
+	\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+	$U_B=0[V]$, $U_E=0[V]$ og $U_C=18[V]$
+	Her vil transistoren være i cut-off. Det vil ikke gå noen strøm $I_B$ og transistoren vil derfor ikke lede. Hele spenningen til kilden vil ligge over $U_C$.
+
+\end{solution}
+
+
+
+
+\begin{question}[name=Oppgave, topic=transBJT]
+Ta utgangspunkt i kretsen som vist i Figur \ref{fig:tranBJT8} og beregn $I_C$, $U_1$, $\beta$ og $R_1$
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{transistor-BJT/figurer/krets8.png}
+		\caption{Krets med BJT-transistor}
+		\label{fig:tranBJT8}
+	\end{figure}
+	
+\end{question}
+
+\vspace{0.5cm} % Add space after the solution
+
+\begin{solution}[name=Løsningsforslag oppgave]
+\[I_C=I_E - I_C=4 \cdot 10^{-3} - 20 \cdot 10^{-6}= 3,98[mA]\]
+
+\[U_1 = U_{R_C}+U_{CE} = (I_C \cdot R_C)+U_{CE}=(3,98 \cdot 10^{-3} \cdot 2,2 \cdot10^3) + 7,2 = 15,96 [V]\]
+
+\[\beta=\frac{I_C}{I_B}=\frac{3,98 \cdot 10^{-3}}{20 \cdot 10^{-6}}=199\]
+
+\[R_B=\frac{U_B}{I_B}= \frac{15,96-0,7}{20 \cdot 10^{-6}}=763 [k\Omega]\]
+
+
+\end{solution}
