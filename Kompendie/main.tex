@@ -1,11 +1,10 @@
 \documentclass[12pt]{report}
 
 \usepackage[norsk]{babel}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{graphicx, array, carlito, fancyhdr, comment, etoc, lipsum, enumitem, standalone, subfiles, newclude, float, enumitem, amsmath, hyperref, adjustbox, titlesec, pdfpages}
+\usepackage{graphicx, array, carlito, fancyhdr, comment, etoc, lipsum, enumitem, standalone, subfiles, newclude, float, enumitem, amsmath, adjustbox, titlesec, pdfpages}
 
 \usepackage[style=ieee, sorting=none]{biblatex}
-
+\usepackage[hidelinks]{hyperref}
 % Fjerne Teksten Kapittel fra overskrift. Justerer plasseringen av chapter navn
 \titleformat{\chapter}[display]
 {\Huge\bfseries}
@@ -131,10 +130,19 @@ Dette kapittelet inneholder oppgaver relatert til halvleder dioder. Om ingenting
 
 
 
-\section{FET transistor}
+%\section{FET transistor}
 
-\section{Forsterker i praksiss}
+\section{Forsterkning}
+\label{sec:forsterk}
 
+\subsection{Oppgaver}
+\input{forsterkning/oppgaver-forsterkning}
+\subsection{Løsningsforslag}
+\printsolutions[section]
+
+
+
+\newpage
 \section{Måleteknikk}
 
 \newpage
