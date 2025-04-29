@@ -3,7 +3,11 @@
 \usepackage[norsk]{babel}
 \usepackage{graphicx, array, carlito, fancyhdr, comment, etoc, lipsum, enumitem, standalone, subfiles, newclude, float, enumitem, amsmath, adjustbox, titlesec, pdfpages}
 
+% TIDLIGERE BIB Basert på biblatex eller noe...
 \usepackage[style=ieee, sorting=none]{biblatex}
+\addbibresource{backmatter/referanser.bib}
+
+
 \usepackage[hidelinks]{hyperref}
 % Fjerne Teksten Kapittel fra overskrift. Justerer plasseringen av chapter navn
 \titleformat{\chapter}[display]
@@ -34,8 +38,7 @@
 
 
 
-% Laste inn referanser
-\addbibresource{backmatter/referanser.bib}
+
 
 % Adding abstract funciton
 \newcommand{\chapabstract}[1]{
@@ -140,16 +143,45 @@ Dette kapittelet inneholder oppgaver relatert til halvleder dioder. Om ingenting
 \subsection{Løsningsforslag}
 \printsolutions[section]
 
+\newpage
+
+\section{Operasjonsforsterker}
+\label{sec:opamp}
+
+\subsection{Oppgaver}
+\input{operasjonsforsterker/oppgaver_operasjonsforsterker}
+\subsection{Løsningsforslag}
+\printsolutions[section]
+
+
 
 
 \newpage
-\section{Måleteknikk}
+
+
+\chapter{Måleteknikk}
+\section{Måleusikkerhet}
+\input{måleteknikk/måleusikkerhet}
+
+
+\section{Oppgaver}
+\input{måleteknikk/oppgaver-måleusikkerhet}
+\section{Løsningsforslag}
+\printsolutions[chapter]
+
 
 \newpage
+\chapter{Referanser}
+\printbibliography[heading=none]
 
-\printbibliography%[title={Referanser}]
-
+%\printbibheading[title={Referanser}]
+%\printbibliography[keyword=datablad, heading=subbibliography, title={Datablad}]
+%\printbibliography[type=online, heading=subbibliography, title={Bøker}]
 \appendix
+
+
 \input{backmatter/vedlegg}
+
+
 
 \end{document}

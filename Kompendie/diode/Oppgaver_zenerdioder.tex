@@ -1,11 +1,11 @@
 %TEMPLATE
-\begin{comment}	
+\begin{comment}
 	\begin{question}[name=Oppgave, topic=zenerdioder]
-		
+
 	\end{question}
-	
+
 	\vspace{0.5cm} % Add space after the solution
-	
+
 	\begin{solution}[name=Løsningsforslag oppgave]
 
 	\end{solution}
@@ -27,7 +27,7 @@ Hvilken side er katode, og hva heter den andre siden vist i Figur \ref{fig:zenBa
 \vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
-A er andode mens B er katode.
+A er anode mens B er katode.
 
 \end{solution}
 
@@ -61,7 +61,7 @@ En zenerdiode er merket 6V2/3W. Hva er den maksimale strømmen zenerdioden kan t
 
 \begin{solution}[name=Løsningsforslag oppgave]
 \[P=U\cdot I\rightarrow I=\frac{P}{U}=\frac{3}{6,2}=484 [mA]\]
-	
+
 \end{solution}
 
 
@@ -72,7 +72,7 @@ En likespenning som varierer mellom $18 [V]$ og $24 [V]$ skal benyttes for å ge
 \begin{enumerate}[label=\roman*)]
 	\item Tegn opp kretsen
 	\item Beregn den minste verdien seriemotstanden kan ha
-	\item Beregn størrelsen på strømmen det maksimalt kan trekkes fra den stabiliserte spenningen på utgangen, før utgangsspenningen avviker fra $7,5 [A]$
+	\item Beregn størrelsen på strømmen det maksimalt kan trekkes fra den stabiliserte spenningen på utgangen, før utgangspenningen avviker fra $7,5 [A]$
 \end{enumerate}
 \end{question}
 
@@ -88,15 +88,15 @@ En likespenning som varierer mellom $18 [V]$ og $24 [V]$ skal benyttes for å ge
 			\label{fig:zenKrets1}
 		\end{figure}
 	\item Beregner den minste verdien motstanden kan ha slik at strømmen i kretsen ikke blir større enn hva zenerdioden tåler. Starter med å finne den maksimale strømmen dioden tåler.
-	
+
 	\[I_{D_{maks}}=\frac{P}{U_{maks}}=\frac{4}{7,5}=\frac{8}{15}\approx 0,53 [A]\]
-	
-	Finner minste verdi for serieresistansen som vil resultere i å begrense strømmen i kretsen akuratt slik at zenerdioden ikke arbeider utenfor arbeidsområdet sitt ved maksimal spenning og strøm.
-	
+
+	Finner minste verdi for serieresistansen som vil resultere i å begrense strømmen i kretsen akkurat slik at zenerdioden ikke arbeider utenfor arbeidsområdet sitt ved maksimal spenning og strøm.
+
 	\[R_{min}= \frac{U_{maks}}{I_{maks}}= \frac{24-7,5}{0,53} \approx 31 [\Omega]\]
-	
+
 	\item Når strømmen overgår verdien som resulterer i at man overgår effektbegrensingen til zenerdioden, så vil man ikke lenger garantere at zenerdioden klarer å holde spenningen konstant. Den maksimale strømmen har vi alt beregnet.
-	
+
 	\[I_{D_{maks}} \approx 533 [mA]\]
 \end{enumerate}
 \end{solution}
@@ -112,8 +112,8 @@ Kretsen vist i Figur \ref{fig:zenKrets2} viser en zenerdiodekrets konstruert for
 	\item Beregn den maksimale spenningen for $U_{inn}$
 	\item Beregn den minste spenningen for $U_{inn}$
 \end{enumerate}
-	
-	
+
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{diode/figurer/zenKrets2.png}
@@ -137,9 +137,9 @@ Kretsen vist i Figur \ref{fig:zenKrets2} viser en zenerdiodekrets konstruert for
 \[U_{R_{1}}=I_{Zen_{min}} \cdot R_1=4 \cdot 10^{-3} \cdot 1 \cdot 10^3= 4[V]\]
 
 Beregner så den maksimale spenningen kretsen kan ha på inngangen.
-\[U_{inn_{min}}=U_{R_{1}}+U_{D_{1}}=4+10=14 [V]\]	
+\[U_{inn_{min}}=U_{R_{1}}+U_{D_{1}}=4+10=14 [V]\]
 
-\end{enumerate}	
+\end{enumerate}
 \end{solution}
 
 
@@ -150,13 +150,13 @@ Zenerdioden vist i Figur \ref{fig:zenKrets3} tåler en effekt på $5 [W]$. Bereg
 	\includegraphics[width=0.7\textwidth]{diode/figurer/zenKrets3.png}
 	\caption{Krets for spenningsstabilisering}
 	\label{fig:zenKrets3}
-\end{figure}	
+\end{figure}
 \end{question}
 
 \vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
-Finner den totalte strømmen som går gjennom kretsen ved merkeeffekt på dioden.
+Finner den totale strømmen som går gjennom kretsen ved merkeeffekt på dioden.
 
 \[I_{D_{maks}} = \frac{P_D}{U_D} = \frac{5}{8} = 0.625 = 625 [mA]\]
 
@@ -178,24 +178,24 @@ Finn den minste effekten zenerdioden må tåle.
 	\includegraphics[width=0.7\textwidth]{diode/figurer/zenKrets4.png}
 	\caption{Krets for spenningsstabilisering}
 	\label{fig:zenKrets4}
-\end{figure}	
+\end{figure}
 
 \end{question}
 
 \vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag oppgave]
-Verstetilfelle og dimmensjonerende verdi blir med maksimal spenning ut fra spenningskilden ved $10 [V]$.
+Verste tilfelle og dimensjonerende verdi blir med maksimal spenning ut fra spenningskilden ved $10 [V]$.
 
 Beregner spenningsfallet over motstanden.
 \[U_R=U_{inn}-U_{zen}=10-5,1=4,9[V]\]
-	
+
 Beregner strømmen som går i kretsen ved maksimal spenning ut fra spenningskilden.
 \[I_{maks}=\frac{U_R}{R}=\frac{4,9}{33} \approx0,148 = 148 [mA]\]
 
 Beregner effekten som blir omsatt under disse forholdene.
 \[P_{zen}=U_{zen}\cdot I_{zen}= 4,9\cdot 150\cdot 10^{-3}=735[mW]\]
-	
+
 \end{solution}
 
 

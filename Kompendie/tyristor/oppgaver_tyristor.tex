@@ -11,7 +11,7 @@
 \vspace{0.5cm} % Add space after the solution
 
 \begin{enumerate}[label=\roman*)]
-	\item 
+	\item
 	\item
 \end{enumerate}
 
@@ -41,18 +41,18 @@ En tyristor kan kun ha diskrete tilstander, det vil si enten på eller av, mens 
 
 
 \begin{question}[name=Spørsmål, topic=tyristor]
-Kretsen som vist i Figur \ref{fig:tyrTriggplot} viser en spennigskilde koblet til en tyristor, som igjen er koblet til en last angitt som $R$. Tyristorens gate blir trigget av en puls som vist i \ref{fig:tyrForTriggplot}. Tegn hvordan spenningen over lasten $R$ vil endre seg som et produkt av tiden.
+Kretsen som vist i Figur \ref{fig:tyrTriggplot} viser en spenningskilde koblet til en tyristor, som igjen er koblet til en last angitt som $R$. Tyristorens gate blir trigget av en puls som vist i \ref{fig:tyrForTriggplot}. Tegn hvordan spenningen over lasten $R$ vil endre seg som et produkt av tiden.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{tyristor/figurer/tyristor.png}
-	\caption{Tyristor med triggersignal}
+	\caption{Tyristor med trigger-signal}
 	\label{fig:tyrTriggplot}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{tyristor/plot/tyristor3.png}
-	\caption{Forløp for spenningskilde og triggersignal}
+	\caption{Forløp for spenningskilde og trigger-signal}
 	\label{fig:tyrForTriggplot}
 \end{figure}
 
@@ -62,12 +62,12 @@ Kretsen som vist i Figur \ref{fig:tyrTriggplot} viser en spennigskilde koblet ti
 \vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag]
-I Figur \ref{fig:tyrTriggplotSOL} kan man se hvordan tyristoren starter å lede kun når den blir trigget i positiv halvperode. Detter er vist med det lilla arealet. Tyristoren slutter å lede ved nullgjennomgangen og starter ikke å lede før den blir trigget på nytt.
+I Figur \ref{fig:tyrTriggplotSOL} kan man se hvordan tyristoren starter å lede kun når den blir trigget i positiv halvperiode. Detter er vist med det lilla arealet. Tyristoren slutter å lede ved nullgjennomgangen og starter ikke å lede før den blir trigget på nytt.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{tyristor/plot/tyristor3SOL.png}
-	\caption{Tyristor med triggersignal og spenning over last}
+	\caption{Tyristor med trigger-signal og spenning over last}
 	\label{fig:tyrTriggplotSOL}
 \end{figure}
 
@@ -84,8 +84,8 @@ I Figur \ref{fig:tyrTriggplotSOL} kan man se hvordan tyristoren starter å lede 
 	\begin{enumerate}[label=\roman*)]
 		\item Hva står TRIAC for?
 		\item Beskriv hva en TRIAC er
-		\item Hva er det viktigste bruksområdene for traic?
-	
+		\item Hva er det viktigste bruksområdene for TRIAC?
+
 	\end{enumerate}
 \end{question}
 
@@ -100,7 +100,7 @@ I Figur \ref{fig:tyrTriggplotSOL} kan man se hvordan tyristoren starter å lede 
 	\item Triode for Alternating Current
 	\item En TRIAC er en halvlederkomponent som kan lede strøm i begge retninger. Den består av to tyristorer koblet i parallell, men i motsatt retning også kalt antiparallell
 	\item TRIAC-er brukes ofte i vekselstrømskretser for å kontrollere strømmen til laster som motorer, lysdimmere og varmeelementer
-	
+
 \end{enumerate}
 
 
@@ -137,36 +137,36 @@ TRIAC koblingen sørger for at kretsen blir brutt ved nullgjennomgangen som er s
 
 
 \begin{question}[name=Spørsmål, topic=tyristor]
-	Kretsen som vist i Figur \ref{fig:triacTriggplot} viser en spennigskilde koblet til en TRIAC, som igjen er koblet til en last angitt som $R$. TRIAC-ens gate blir trigget av en puls som vist i \ref{fig:triacForTriggplot}. Tegn hvordan spenningen over lasten $R$ vil endre seg som et produkt av tiden.
+	Kretsen som vist i Figur \ref{fig:triacTriggplot} viser en spenningskilde koblet til en TRIAC, som igjen er koblet til en last angitt som $R$. TRIAC-ens gate blir trigget av en puls som vist i \ref{fig:triacForTriggplot}. Tegn hvordan spenningen over lasten $R$ vil endre seg som et produkt av tiden.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth]{tyristor/figurer/triac.png}
-		\caption{TRIAC med triggersignal}
+		\caption{TRIAC med trigger-signal}
 		\label{fig:triacTriggplot}
 	\end{figure}
-	
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\textwidth]{tyristor/plot/triac.png}
-		\caption{Forløp for spenningskilde og triggersignal}
+		\caption{Forløp for spenningskilde og trigger-signal}
 		\label{fig:triacForTriggplot}
 	\end{figure}
-	
-	
+
+
 \end{question}
 
 \vspace{0.5cm} % Add space after the solution
 
 \begin{solution}[name=Løsningsforslag]
-	I Figur \ref{fig:triacTriggplotSOL} kan man se hvordan TRIAC-en starter å lede kun når den blir trigget. Siden en TRIAC er to tyristorer i anitparallel vil TRIAC-en kunne lede for både positive og negative halvperioder. Detter er vist med det lilla arealet. TRIAC-en slutter å lede ved nullgjennomgangen og starter ikke å lede før den blir trigget på nytt.
-	
+	I Figur \ref{fig:triacTriggplotSOL} kan man se hvordan TRIAC-en starter å lede kun når den blir trigget. Siden en TRIAC er to tyristorer i anti-parallell vil TRIAC-en kunne lede for både positive og negative halvperioder. Detter er vist med det lilla arealet. TRIAC-en slutter å lede ved nullgjennomgangen og starter ikke å lede før den blir trigget på nytt.
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.9\textwidth]{tyristor/plot/triacSOL.png}
-		\caption{TRIAC med triggersignal og spenning over last}
+		\caption{TRIAC med trigger-signal og spenning over last}
 		\label{fig:triacTriggplotSOL}
 	\end{figure}
-	
+
 \end{solution}
 
 % ------------------- DIAC -------------------
@@ -190,7 +190,7 @@ TRIAC koblingen sørger for at kretsen blir brutt ved nullgjennomgangen som er s
 	\item Diode for Alternating Current
 	\item DIAC er en halvlederkomponent som kan lede strøm i begge retninger når spenningen over den overstiger en viss terskelverdi
 	\item 30-40 [V]
-	\item I sammenheng med TRIAC-er koblet på gate terminalen for å kompensere for TRIAC-ens naturlige ulikhet når det kommer til å trigge symmetrisk for både positiv og negativ halvperiode. DIAC-en vil holde igjen triggersignalet til det er på et nivå som fører til at begge delene av TRAIC-en vil starte å lede tilnærmet momentant.
+	\item I sammenheng med TRIAC-er koblet på gate terminalen for å kompensere for TRIAC-ens naturlige ulikhet når det kommer til å trigge symmetrisk for både positiv og negativ halvperiode. DIAC-en vil holde igjen trigger-signalet til det er på et nivå som fører til at begge delene av TRAIC-en vil starte å lede tilnærmet momentant.
 \end{enumerate}
 \end{solution}
 
